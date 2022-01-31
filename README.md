@@ -1,4 +1,4 @@
-# Playlistmanager
+# PlaylistManager
 A Discord Bot to manage a pre configured private Playlist
 
 ## Installation
