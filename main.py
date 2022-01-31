@@ -20,12 +20,6 @@ client_secret = config['SpotifyAPI']['client_secret']
 redirect_uri = "http://localhost:6969/callback" #Wo es nach der Nutzer Authentifizierung hingeht, am besten Host IP und Port angeben
 scope = 'playlist-modify-private' #https://developer.spotify.com/documentation/general/guides/authorization/scopes/#playlist-modify-private
 
-#Discord Setup
-description = '''Ein Bot zum managen von Playlists'''
-intents = discord.Intents.default()
-activity=discord.Activity(type=discord.ActivityType.listening, name="Hardmelodies")
-bot = commands.Bot(command_prefix='?', description=description, intents=intents, activity=activity)
-
 #Spotify Setup
 token = util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_uri)
 if token:
@@ -33,6 +27,14 @@ if token:
 else:
     print("Can't get token for", username)
     sys.exit()
+
+#Discord Setup
+description = '''Ein Bot zum Verwalten von Playlists'''
+intents = discord.Intents.default()
+Playlist_Name = sp.user_playlist(username, playlist_ID)["name"]
+activity=discord.Activity(type=discord.ActivityType.listening, name=Playlist_Name)
+bot = commands.Bot(command_prefix='?', description=description, intents=intents, activity=activity)
+
 
 #Bot Logik
 
@@ -112,9 +114,15 @@ async def info(ctx):
 
     await ctx.send(embed=embed)
 
+@bot.command(aliases=['playlist', 'list', 'url'])
+async def link(ctx):
+    """Gibt Link der Verwalteten Playlist zurück"""
+    await ctx.send(sp.user_playlist(username, playlist_ID)["external_urls"]["spotify"])
+
+
 @bot.command()
 async def ping(ctx):
-    """Lässt den Bot mit pong antworten. Was hast du erwartet?"""
+    """Lässt den Bot mit pong antworten. Was hast du erwartet?!"""
     await ctx.send('pong')        
 
 #Sartet Bot
