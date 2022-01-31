@@ -27,13 +27,14 @@ Bot commands start with ?<command>
 
 Output ?help:
 ```
-Ein Bot zum managen von Playlists
+Ein Bot zum Verwalten von Playlists
 
-No Category:
+​No Category:
   add    Fügt Lied zur Playlist hinzu
   help   Shows this message
   info   Gibt Informationen über den aktuellen Server
-  ping   Lässt den Bot mit pong antworten. Was hast du erwartet?
+  link   Gibt Link der Verwalteten Playlist zurück
+  ping   Lässt den Bot mit pong antworten. Was hast du erwartet?!
   remove Emtfernt Lied von Playlist
 
 Type ?help command for more info on a command.
