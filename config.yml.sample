@@ -3,6 +3,13 @@ DiscordAPI:
   #Discord API Token
   Token :  
 
+#Spotify API Stuff
+SpotifyAPI:
+  #Spotify Applikation ID  
+  client_id :
+  #Spotify Applikation Secret    
+  client_secret :    
+
 #Spotify User Stuff
 SpotifyUser:
   #Spotify Username
@@ -10,9 +17,3 @@ SpotifyUser:
   #Spotify Playlist ID  
   playlist_ID :  
 
-#Spotify API Stuff
-SpotifyAPI:
-  #Spotify Applikation ID  
-  client_id :
-  #Spotify Applikation Secret    
-  client_secret :  
