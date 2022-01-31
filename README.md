@@ -1,5 +1,5 @@
 # Playlistmanager
-A Discord Bot to managae a pre configured private Playlist
+A Discord Bot to manage a pre configured private Playlist
 
 ## Installation
 1. clone repo `git clone https://github.com/ComictypX/Playlistmanager.git`
