@@ -29,7 +29,7 @@ Output ?help:
 ```
 Ein Bot zum Verwalten von Playlists
 
-​No Category:
+No Category:
   add    Fügt Lied zur Playlist hinzu
   help   Shows this message
   info   Gibt Informationen über den aktuellen Server
@@ -40,4 +40,7 @@ Ein Bot zum Verwalten von Playlists
 Type ?help command for more info on a command.
 You can also type ?help category for more info on a category.
 ```
-   
+
+## Todo
+- Permission-System (Who should be able to use Bot)
+- ability to limit bot to specific channels
